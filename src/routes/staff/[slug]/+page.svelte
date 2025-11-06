@@ -18,7 +18,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center gap-3">
-					<GraduationCap class="h-8 w-8 text-[color:var(--color-secondary)]" />
+					<GraduationCap class="h-8 w-8 text-secondary" />
 					<span class="text-xl font-bold text-slate-900">Staff Directory</span>
 				</div>
 				
@@ -62,7 +62,7 @@
 							class="w-40 h-40 rounded-xl object-cover border-4 border-white shadow-lg flex-shrink-0"
 						/>
 					{:else}
-						<div class="w-24 h-24 bg-gradient-to-br from-[color:var(--color-secondary)] to-[color:var(--color-accent)] rounded-full flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">
+						<div class="w-24 h-24 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-white text-4xl font-bold flex-shrink-0">
 							{staff.fullName.charAt(0)}
 						</div>
 					{/if}
@@ -86,7 +86,7 @@
 							{#if staff.email}
 								<div class="flex items-center gap-2 text-slate-700">
 									<Mail class="h-4 w-4 text-slate-400" />
-									<a href="mailto:{staff.email}" class="text-[color:var(--color-secondary)] hover:underline">
+									<a href="mailto:{staff.email}" class="text-secondary hover:underline">
 										{staff.email}
 									</a>
 								</div>
@@ -127,7 +127,7 @@
 			>
 				<div class="card mb-6">
 					<h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-						<UserIcon class="h-5 w-5 text-[color:var(--color-secondary)]" />
+						<UserIcon class="h-5 w-5 text-secondary" />
 						Biography
 					</h2>
 					<p class="text-slate-700 whitespace-pre-line leading-relaxed">{staff.biography}</p>
@@ -144,7 +144,7 @@
 			>
 				<div class="card mb-6">
 					<h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-						<BookOpen class="h-5 w-5 text-[color:var(--color-secondary)]" />
+						<BookOpen class="h-5 w-5 text-secondary" />
 						Research Interests
 					</h2>
 					<p class="text-slate-700 whitespace-pre-line leading-relaxed">{staff.researchInterests}</p>
@@ -161,7 +161,7 @@
 			>
 				<div class="card mb-6">
 					<h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-						<GraduationCap class="h-5 w-5 text-[color:var(--color-secondary)]" />
+						<GraduationCap class="h-5 w-5 text-secondary" />
 						Education Background
 					</h2>
 					<p class="text-slate-700 whitespace-pre-line leading-relaxed">{staff.education}</p>
@@ -178,7 +178,7 @@
 			>
 				<div class="card mb-6">
 					<h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-						<Award class="h-5 w-5 text-[color:var(--color-secondary)]" />
+						<Award class="h-5 w-5 text-secondary" />
 						Publications & Achievements
 					</h2>
 					<p class="text-slate-700 whitespace-pre-line leading-relaxed">{staff.publications}</p>
@@ -192,13 +192,13 @@
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, delay: 0.5 }}
 		>
-			<div class="card bg-gradient-to-r from-[color:var(--color-secondary)] to-blue-700 text-white">
+			<div class="card bg-gradient-to-r from-secondary to-blue-700 text-white">
 				<h2 class="text-xl font-bold mb-4">Get in Touch</h2>
 				<p class="mb-4">Feel free to reach out for academic inquiries, collaborations, or appointments.</p>
 				{#if staff.email}
 					<a 
 						href="mailto:{staff.email}" 
-						class="btn bg-white text-[color:var(--color-secondary)] hover:bg-blue-50 inline-flex items-center gap-2"
+						class="btn bg-white text-secondary hover:bg-blue-50 inline-flex items-center gap-2"
 					>
 						<Mail class="h-4 w-4" />
 						Send Email

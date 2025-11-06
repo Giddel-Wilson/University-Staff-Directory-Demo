@@ -69,15 +69,15 @@ code, pre {
 }
 
 .btn-primary {
-	@apply bg-[color:var(--color-secondary)] text-white hover:bg-blue-700 active:bg-blue-800 shadow-sm;
+	@apply bg-secondary text-white hover:bg-blue-700 active:bg-blue-800 shadow-sm;
 }
 
 .btn-secondary {
 	@apply bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300;
 }
 
-.btn-accent {
-	@apply bg-[color:var(--color-accent)] text-white hover:bg-teal-600 active:bg-teal-700 shadow-sm;
+.btn-secondary {
+	@apply bg-accent text-white hover:bg-teal-600 active:bg-teal-700 shadow-sm;
 }
 
 .btn-outline {
@@ -97,7 +97,7 @@ code, pre {
 }
 
 .input {
-	@apply flex h-10 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-secondary)] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+	@apply flex h-10 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
 }
 
 .label {

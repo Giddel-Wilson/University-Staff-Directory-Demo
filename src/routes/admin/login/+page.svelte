@@ -50,7 +50,7 @@
 		<div class="w-full max-w-md">
 			<!-- Header -->
 			<div class="text-center mb-8">
-				<div class="inline-flex items-center justify-center w-16 h-16 bg-[color:var(--color-secondary)] rounded-2xl mb-4 shadow-lg">
+				<div class="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-2xl mb-4 shadow-lg">
 					<Shield class="h-8 w-8 text-white" />
 				</div>
 				<h1 class="text-3xl font-bold text-slate-900 mb-2">Admin Portal</h1>
@@ -119,7 +119,7 @@
 
 				<!-- Footer -->
 				<div class="mt-6 pt-6 border-t border-slate-200 text-center">
-					<a href="/login" class="text-sm text-[color:var(--color-secondary)] hover:text-blue-700 transition-colors">
+					<a href="/login" class="text-sm text-secondary hover:text-blue-700 transition-colors">
 						← Back to Staff Login
 					</a>
 				</div>

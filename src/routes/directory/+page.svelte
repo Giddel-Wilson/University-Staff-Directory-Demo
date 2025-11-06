@@ -88,7 +88,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center gap-3">
-					<GraduationCap class="h-8 w-8 text-[color:var(--color-secondary)]" />
+					<GraduationCap class="h-8 w-8 text-secondary" />
 					<span class="text-xl font-bold text-slate-900">Staff Directory</span>
 				</div>
 				
@@ -132,7 +132,7 @@
 			<div class="text-center mb-8">
 				<h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
 					Browse Our
-					<span class="text-transparent bg-clip-text bg-gradient-to-r from-[color:var(--color-secondary)] to-[color:var(--color-accent)]">
+					<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
 						Faculty & Staff
 					</span>
 				</h1>
@@ -201,7 +201,7 @@
 
 		{#if loading}
 			<div class="text-center py-12">
-				<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[color:var(--color-secondary)] mx-auto"></div>
+				<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary mx-auto"></div>
 				<p class="mt-4 text-slate-600">Loading staff directory...</p>
 			</div>
 		{:else if staff.length === 0}
@@ -235,7 +235,7 @@
 										class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
 									/>
 								{:else}
-									<div class="w-16 h-16 bg-gradient-to-br from-[color:var(--color-secondary)] to-[color:var(--color-accent)] rounded-full flex items-center justify-center text-white text-2xl font-bold">
+									<div class="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-white text-2xl font-bold">
 										{member.fullName.charAt(0)}
 									</div>
 								{/if}
@@ -260,7 +260,7 @@
 								{#if member.email}
 									<div class="flex items-center gap-2 text-slate-700">
 										<Mail class="h-4 w-4 text-slate-400" />
-										<a href="mailto:{member.email}" class="text-[color:var(--color-secondary)] hover:underline truncate">
+										<a href="mailto:{member.email}" class="text-secondary hover:underline truncate">
 											{member.email}
 										</a>
 									</div>

@@ -167,7 +167,7 @@
 {#if loading}
 	<div class="min-h-screen bg-gradient-to-br from-white via-blue-50 to-teal-50 flex items-center justify-center">
 		<div class="text-center">
-			<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[color:var(--color-secondary)] mx-auto"></div>
+			<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary mx-auto"></div>
 			<p class="mt-4 text-slate-600">Loading dashboard...</p>
 		</div>
 	</div>
@@ -178,7 +178,7 @@
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-16">
 					<div class="flex items-center gap-3">
-						<User class="h-6 w-6 text-[color:var(--color-secondary)]" />
+						<User class="h-6 w-6 text-secondary" />
 						<span class="font-semibold text-slate-900">Staff Dashboard</span>
 					</div>
 					
@@ -201,7 +201,7 @@
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
 			>
-				<div class="card mb-8 bg-gradient-to-r from-[color:var(--color-secondary)] to-blue-700 text-white">
+				<div class="card mb-8 bg-gradient-to-r from-secondary to-blue-700 text-white">
 					<div class="flex items-center gap-4">
 						{#if user?.photoUrl}
 							<img 
@@ -237,7 +237,7 @@
 					<div class="card">
 						<div class="flex items-center gap-3">
 							<div class="bg-blue-100 p-3 rounded-lg">
-								<Building2 class="h-5 w-5 text-[color:var(--color-secondary)]" />
+								<Building2 class="h-5 w-5 text-secondary" />
 							</div>
 							<div>
 								<p class="text-sm text-slate-600">Faculty</p>
@@ -249,7 +249,7 @@
 					<div class="card">
 						<div class="flex items-center gap-3">
 							<div class="bg-teal-100 p-3 rounded-lg">
-								<Award class="h-5 w-5 text-[color:var(--color-accent)]" />
+								<Award class="h-5 w-5 text-accent" />
 							</div>
 							<div>
 								<p class="text-sm text-slate-600">Status</p>
@@ -298,7 +298,7 @@
 					<!-- Profile Picture Upload -->
 					<div class="mb-8 pb-6 border-b border-slate-200">
 						<h3 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
-							<Camera class="h-5 w-5 text-[color:var(--color-secondary)]" />
+							<Camera class="h-5 w-5 text-secondary" />
 							Profile Picture
 						</h3>
 						
@@ -312,7 +312,7 @@
 										class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
 									/>
 								{:else}
-									<div class="w-32 h-32 rounded-full bg-gradient-to-br from-[color:var(--color-secondary)] to-[color:var(--color-accent)] flex items-center justify-center text-white text-4xl font-bold">
+									<div class="w-32 h-32 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white text-4xl font-bold">
 										{user?.fullName?.charAt(0) || 'U'}
 									</div>
 								{/if}

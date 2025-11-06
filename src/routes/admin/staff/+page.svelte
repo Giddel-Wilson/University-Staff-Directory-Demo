@@ -161,7 +161,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center gap-3">
-					<Shield class="h-6 w-6 text-[color:var(--color-secondary)]" />
+					<Shield class="h-6 w-6 text-secondary" />
 					<span class="text-xl font-bold text-slate-900">Admin Portal</span>
 				</div>
 				
@@ -233,7 +233,7 @@
 
 		{#if loading}
 			<div class="text-center py-12">
-				<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[color:var(--color-secondary)] mx-auto"></div>
+				<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary mx-auto"></div>
 				<p class="mt-4 text-slate-600">Loading staff...</p>
 			</div>
 		{:else if staff.length === 0}
@@ -289,7 +289,7 @@
 														class="w-10 h-10 rounded-full object-cover border-2 border-slate-200"
 													/>
 												{:else}
-													<div class="w-10 h-10 bg-gradient-to-br from-[color:var(--color-secondary)] to-[color:var(--color-accent)] rounded-full flex items-center justify-center text-white text-sm font-bold">
+													<div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-white text-sm font-bold">
 														{member.fullName.charAt(0)}
 													</div>
 												{/if}

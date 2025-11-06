@@ -50,7 +50,7 @@
 {#if loading}
 	<div class="min-h-screen bg-gradient-to-br from-white via-blue-50 to-teal-50 flex items-center justify-center">
 		<div class="text-center">
-			<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[color:var(--color-secondary)] mx-auto"></div>
+			<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary mx-auto"></div>
 			<p class="mt-4 text-slate-600">Loading dashboard...</p>
 		</div>
 	</div>
@@ -61,7 +61,7 @@
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-16">
 					<div class="flex items-center gap-3">
-						<Shield class="h-6 w-6 text-[color:var(--color-secondary)]" />
+						<Shield class="h-6 w-6 text-secondary" />
 						<span class="text-xl font-bold text-slate-900">Admin Dashboard</span>
 					</div>
 					
@@ -89,7 +89,7 @@
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
 				>
-					<div class="card bg-gradient-to-r from-[color:var(--color-secondary)] to-blue-700 text-white mb-8">
+					<div class="card bg-gradient-to-r from-secondary to-blue-700 text-white mb-8">
 						<h1 class="text-3xl font-bold mb-2">Welcome, Administrator</h1>
 						<p class="text-blue-100">Here's an overview of your university staff directory</p>
 					</div>
@@ -105,7 +105,7 @@
 						<div class="card hover:shadow-lg transition-shadow">
 							<div class="flex items-center justify-between mb-4">
 								<div class="bg-blue-100 p-3 rounded-lg">
-									<Users class="h-6 w-6 text-[color:var(--color-secondary)]" />
+									<Users class="h-6 w-6 text-secondary" />
 								</div>
 								<TrendingUp class="h-5 w-5 text-green-600" />
 							</div>
@@ -178,7 +178,7 @@
 					>
 						<div class="card">
 							<h2 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-								<Clock class="h-5 w-5 text-[color:var(--color-accent)]" />
+								<Clock class="h-5 w-5 text-accent" />
 								Recent Registrations
 							</h2>
 							{#if stats.recentRegistrations.length > 0}
@@ -218,7 +218,7 @@
 					>
 						<div class="card">
 							<h2 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-								<Building2 class="h-5 w-5 text-[color:var(--color-accent)]" />
+								<Building2 class="h-5 w-5 text-accent" />
 								Staff by Faculty
 							</h2>
 							{#if stats.staffByFaculty.length > 0}
@@ -227,7 +227,7 @@
 										<div class="bg-slate-50 rounded-lg p-4 border border-slate-200">
 											<div class="flex items-center justify-between">
 												<span class="text-slate-900 font-medium">{faculty._id || 'Unassigned'}</span>
-												<span class="bg-[color:var(--color-secondary)] text-white text-sm font-bold px-3 py-1 rounded-full">
+												<span class="bg-secondary text-white text-sm font-bold px-3 py-1 rounded-full">
 													{faculty.count}
 												</span>
 											</div>

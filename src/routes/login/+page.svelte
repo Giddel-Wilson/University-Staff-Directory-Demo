@@ -48,7 +48,7 @@
 			transition={{ duration: 0.5 }}
 		>
 			<div class="text-center mb-8">
-				<a href="/" class="inline-flex items-center gap-2 text-[color:var(--color-secondary)] hover:text-blue-700 transition-colors mb-4">
+				<a href="/" class="inline-flex items-center gap-2 text-secondary hover:text-blue-700 transition-colors mb-4">
 					<GraduationCap class="h-10 w-10" />
 					<span class="text-2xl font-bold">Staff Directory</span>
 				</a>
@@ -103,10 +103,10 @@
 
 					<div class="flex items-center justify-between text-sm">
 						<label class="flex items-center gap-2 cursor-pointer">
-							<input type="checkbox" class="rounded border-slate-300 text-[color:var(--color-secondary)] focus:ring-[color:var(--color-secondary)]" />
+							<input type="checkbox" class="rounded border-slate-300 text-secondary focus:ring-secondary" />
 							<span class="text-slate-600">Remember me</span>
 						</label>
-						<a href="/forgot-password" class="text-[color:var(--color-secondary)] hover:text-blue-700 font-medium">
+						<a href="/forgot-password" class="text-secondary hover:text-blue-700 font-medium">
 							Forgot password?
 						</a>
 					</div>
@@ -128,7 +128,7 @@
 				<div class="mt-6 text-center">
 					<p class="text-slate-600 text-sm">
 						Don't have an account?
-						<a href="/register" class="text-[color:var(--color-secondary)] hover:text-blue-700 font-medium">
+						<a href="/register" class="text-secondary hover:text-blue-700 font-medium">
 							Register here
 						</a>
 					</p>
@@ -137,7 +137,7 @@
 				<div class="mt-6 pt-6 border-t border-slate-200">
 					<p class="text-center text-sm text-slate-600">
 						Are you an administrator?
-						<a href="/admin/login" class="text-[color:var(--color-secondary)] hover:text-blue-700 font-medium">
+						<a href="/admin/login" class="text-secondary hover:text-blue-700 font-medium">
 							Admin Login
 						</a>
 					</p>
