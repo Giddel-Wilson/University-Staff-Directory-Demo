@@ -2,15 +2,16 @@ import { json, type RequestHandler } from '@sveltejs/kit';
 import { requireUser } from '$lib/server/middleware/auth';
 import { v2 as cloudinary } from 'cloudinary';
 import User from '$lib/server/db/models/User';
+import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } from '$env/static/private';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
 
 // Configure Cloudinary
 cloudinary.config({
-	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-	api_key: process.env.CLOUDINARY_API_KEY,
-	api_secret: process.env.CLOUDINARY_API_SECRET
+	cloud_name: CLOUDINARY_CLOUD_NAME,
+	api_key: CLOUDINARY_API_KEY,
+	api_secret: CLOUDINARY_API_SECRET
 });
 
 export const POST: RequestHandler = async (event) => {

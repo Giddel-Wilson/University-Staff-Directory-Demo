@@ -1,0 +1,96 @@
+🚀 CLOUDINARY SETUP - REQUIRED FOR PROFILE PICTURES TO WORK ON VERCEL
+
+The profile pictures are now using Cloudinary (cloud storage) instead of local filesystem.
+This is necessary because Vercel is serverless - uploaded files don't persist.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 STEP 1: Create FREE Cloudinary Account (2 minutes)
+
+1. Go to: https://cloudinary.com/users/register/free
+2. Sign up with your email (NO credit card needed)
+3. Verify your email
+4. You'll be redirected to the dashboard
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 STEP 2: Get Your Credentials
+
+On the Cloudinary Dashboard, you'll see:
+
+┌─────────────────────────────────────────┐
+│  Cloud Name: dxxxxxxxxx                 │
+│  API Key: 123456789012345               │
+│  API Secret: ************************   │  ← Click "Show" to reveal
+└─────────────────────────────────────────┘
+
+Copy these three values!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 STEP 3: Add to Vercel (IMPORTANT!)
+
+1. Go to: https://vercel.com/giddel-wilsons-projects/university-staff-directory
+2. Click "Settings" tab
+3. Click "Environment Variables" in the sidebar
+4. Add these THREE variables:
+
+   Variable Name: CLOUDINARY_CLOUD_NAME
+   Value: [paste your cloud name]
+   ☑ Production ☑ Preview ☑ Development
+
+   Variable Name: CLOUDINARY_API_KEY
+   Value: [paste your API key]
+   ☑ Production ☑ Preview ☑ Development
+
+   Variable Name: CLOUDINARY_API_SECRET
+   Value: [paste your API secret]
+   ☑ Production ☑ Preview ☑ Development
+
+5. Click "Save" for each one
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 STEP 4: Redeploy on Vercel
+
+After adding the environment variables:
+
+1. Go to "Deployments" tab
+2. Click the three dots (...) on the latest deployment
+3. Click "Redeploy"
+4. Wait for deployment to complete (2-3 minutes)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ STEP 5: Test It!
+
+1. Go to your deployed site
+2. Login to staff dashboard
+3. Upload a profile picture
+4. It should now work! 🎉
+
+The image URL will be: https://res.cloudinary.com/[your-cloud-name]/...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 Why Cloudinary?
+
+✅ FREE tier: 25GB storage (thousands of profile pictures)
+✅ Works with Vercel serverless deployment
+✅ Automatic image optimization and compression
+✅ Fast CDN delivery worldwide
+✅ Auto-resize and crop to perfect dimensions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ Need Help?
+
+The full setup guide is in: CLOUDINARY_SETUP.md
+
+If you have issues, check:
+- All 3 environment variables are set correctly on Vercel
+- You clicked "Save" for each variable
+- You redeployed after adding variables
+- Your Cloudinary account is verified
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
