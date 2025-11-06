@@ -1,12 +1,17 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { requireUser } from '$lib/server/middleware/auth';
-import { writeFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { v2 as cloudinary } from 'cloudinary';
+import User from '$lib/server/db/models/User';
 
-const UPLOAD_DIR = 'static/uploads/profiles';
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
+
+// Configure Cloudinary
+cloudinary.config({
+	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+	api_key: process.env.CLOUDINARY_API_KEY,
+	api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 export const POST: RequestHandler = async (event) => {
 	try {
@@ -34,27 +39,35 @@ export const POST: RequestHandler = async (event) => {
 			);
 		}
 
-		// Create upload directory if it doesn't exist
-		if (!existsSync(UPLOAD_DIR)) {
-			await mkdir(UPLOAD_DIR, { recursive: true });
-		}
-
-		// Generate unique filename
-		const ext = path.extname(file.name);
-		const filename = `${user._id}-${Date.now()}${ext}`;
-		const filepath = path.join(UPLOAD_DIR, filename);
-
-		// Save file
+		// Convert file to base64 for Cloudinary upload
 		const arrayBuffer = await file.arrayBuffer();
 		const buffer = Buffer.from(arrayBuffer);
-		await writeFile(filepath, buffer);
+		const base64 = buffer.toString('base64');
+		const dataURI = `data:${file.type};base64,${base64}`;
 
-		// Generate URL
-		const photoUrl = `/uploads/profiles/${filename}`;
+		// Upload to Cloudinary
+		const uploadResult = await cloudinary.uploader.upload(dataURI, {
+			folder: 'university-staff-profiles',
+			public_id: `${user._id}-${Date.now()}`,
+			transformation: [
+				{ width: 500, height: 500, crop: 'fill', gravity: 'face' },
+				{ quality: 'auto', fetch_format: 'auto' }
+			]
+		});
 
-		// Update user profile
-		user.photoUrl = photoUrl;
-		await user.save();
+		// Get the optimized URL
+		const photoUrl = uploadResult.secure_url;
+
+		// Update user profile in database
+		const updatedUser = await User.findByIdAndUpdate(
+			user._id,
+			{ photoUrl },
+			{ new: true }
+		);
+
+		if (!updatedUser) {
+			return json({ error: 'User not found' }, { status: 404 });
+		}
 
 		return json({
 			success: true,
