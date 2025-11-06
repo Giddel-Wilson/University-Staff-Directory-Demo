@@ -1,7 +1,6 @@
 import { json, type RequestHandler } from '@sveltejs/kit';
 import { requireUser } from '$lib/server/middleware/auth';
 import { v2 as cloudinary } from 'cloudinary';
-import User from '$lib/server/db/models/User';
 import { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } from '$env/static/private';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -59,16 +58,9 @@ export const POST: RequestHandler = async (event) => {
 		// Get the optimized URL
 		const photoUrl = uploadResult.secure_url;
 
-		// Update user profile in database
-		const updatedUser = await User.findByIdAndUpdate(
-			user._id,
-			{ photoUrl },
-			{ new: true }
-		);
-
-		if (!updatedUser) {
-			return json({ error: 'User not found' }, { status: 404 });
-		}
+		// Update user profile directly (user is already a Mongoose document)
+		user.photoUrl = photoUrl;
+		await user.save();
 
 		return json({
 			success: true,
