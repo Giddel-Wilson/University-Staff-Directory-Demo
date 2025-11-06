@@ -51,6 +51,7 @@
 	"dependencies": {
 		"@getbrevo/brevo": "^3.0.1",
 		"@sveltejs/adapter-vercel": "^6.1.1",
+		"autoprefixer": "^10.4.20",
 		"bcryptjs": "^3.0.3",
 		"bits-ui": "^2.14.2",
 		"clsx": "^2.1.1",
