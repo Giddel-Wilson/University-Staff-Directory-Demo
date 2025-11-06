@@ -2,30 +2,5 @@
 	"buildCommand": "npm run build",
 	"devCommand": "npm run dev",
 	"installCommand": "npm install",
-	"framework": "sveltekit",
-	"env": {
-		"MONGODB_URI": "@mongodb_uri",
-		"JWT_SECRET": "@jwt_secret",
-		"JWT_EXPIRES_IN": "7d",
-		"SMTP_HOST": "@smtp_host",
-		"SMTP_PORT": "@smtp_port",
-		"SMTP_SECURE": "@smtp_secure",
-		"SMTP_USER": "@smtp_user",
-		"SMTP_PASS": "@smtp_pass",
-		"ADMIN_EMAIL": "@admin_email",
-		"PUBLIC_APP_URL": "@public_app_url",
-		"NODE_ENV": "production",
-		"BACKUP_ENABLED": "true",
-		"BACKUP_SCHEDULE": "0 0 * * 0"
-	},
-	"crons": [
-		{
-			"path": "/api/cron/backup",
-			"schedule": "0 0 * * 0"
-		},
-		{
-			"path": "/api/cron/cleanup-logs",
-			"schedule": "0 2 * * *"
-		}
-	]
+	"framework": "sveltekit"
 }
