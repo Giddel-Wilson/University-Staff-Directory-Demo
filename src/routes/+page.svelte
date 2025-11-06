@@ -63,7 +63,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<div class="flex items-center gap-3">
-					<GraduationCap class="h-8 w-8 text-[color:var(--color-secondary)]" />
+					<GraduationCap class="h-8 w-8 text-secondary" />
 					<span class="text-xl font-bold text-slate-900">University Staff Directory</span>
 				</div>
 				
@@ -104,7 +104,7 @@
 				<div class="text-center mb-12">
 					<h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
 						Find Your University
-						<span class="text-transparent bg-clip-text bg-gradient-to-r from-[color:var(--color-secondary)] to-[color:var(--color-accent)]">
+						<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">
 							Faculty & Staff
 						</span>
 					</h1>
@@ -123,7 +123,7 @@
 							type="text"
 							bind:value={searchQuery}
 							placeholder="Search by name, department, faculty, or expertise..."
-							class="w-full h-14 pl-12 pr-32 text-base rounded-xl border-2 border-slate-200 bg-white shadow-sm focus:border-[color:var(--color-secondary)] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+							class="w-full h-14 pl-12 pr-32 text-base rounded-xl border-2 border-slate-200 bg-white shadow-sm focus:border-secondary focus:ring-2 focus:ring-blue-100 outline-none transition-all"
 						/>
 						<button 
 							type="submit" 
@@ -144,7 +144,7 @@
 							transition={{ duration: 0.5, delay: i * 0.1 }}
 						>
 							<div class="card text-center">
-								<div class="text-4xl font-bold text-[color:var(--color-secondary)] mb-2">
+								<div class="text-4xl font-bold text-secondary mb-2">
 									{stat.value}
 								</div>
 								<div class="text-slate-600">{stat.label}</div>
@@ -183,7 +183,7 @@
 							{@const Icon = feature.icon}
 							<div class="card hover:shadow-lg transition-shadow">
 								<div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-									<Icon class="h-6 w-6 text-[color:var(--color-secondary)]" />
+									<Icon class="h-6 w-6 text-secondary" />
 								</div>
 								<h3 class="text-xl font-semibold text-slate-900 mb-2">
 									{feature.title}
@@ -200,7 +200,7 @@
 	</section>
 
 	<!-- CTA Section -->
-	<section class="py-20 px-4 bg-gradient-to-r from-[color:var(--color-secondary)] to-blue-700 text-white">
+	<section class="py-20 px-4 bg-gradient-to-r from-secondary to-blue-700 text-white">
 		<Motion
 			initial={{ opacity: 0, scale: 0.95 }}
 			animate={{ opacity: 1, scale: 1 }}
@@ -214,11 +214,11 @@
 					Join our directory and make it easier for students and colleagues to connect with you.
 				</p>
 				<div class="flex gap-4 justify-center flex-wrap">
-					<a href="/register" class="btn bg-white text-[color:var(--color-secondary)] hover:bg-blue-50 hover:space-x-6">
+					<a href="/register" class="btn bg-white text-secondary hover:bg-blue-50 hover:space-x-6">
 						Create Your Profile
 						<ArrowRight class="h-4 w-4" />
 					</a>
-					<a href="/directory" class="btn btn-outline border-white text-[color:var(--color-secondary)] hover:bg-black hover:scale-105 transition-transform">
+					<a href="/directory" class="btn btn-outline border-white text-white hover:bg-white hover:text-secondary hover:scale-105 transition-transform">
 						Browse Directory
 					</a>
 				</div>
@@ -232,7 +232,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
 				<div>
 					<div class="flex items-center gap-2 mb-4">
-						<GraduationCap class="h-6 w-6 text-[color:var(--color-accent)]" />
+						<GraduationCap class="h-6 w-6 text-accent" />
 						<span class="font-bold text-white">University Staff Directory</span>
 					</div>
 					<p class="text-sm">

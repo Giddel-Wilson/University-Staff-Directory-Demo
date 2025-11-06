@@ -13,6 +13,21 @@ export default {
 				secondary: '#2563eb',
 				accent: '#14b8a6',
 				dark: '#1e293b'
+			},
+			textColor: {
+				'custom-secondary': 'var(--color-secondary)',
+				'custom-accent': 'var(--color-accent)',
+				'custom-dark': 'var(--color-dark)'
+			},
+			backgroundColor: {
+				'custom-secondary': 'var(--color-secondary)',
+				'custom-accent': 'var(--color-accent)',
+				'custom-dark': 'var(--color-dark)'
+			},
+			borderColor: {
+				'custom-secondary': 'var(--color-secondary)',
+				'custom-accent': 'var(--color-accent)',
+				'custom-dark': 'var(--color-dark)'
 			}
 		}
 	},
