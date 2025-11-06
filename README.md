@@ -1,5 +1,7 @@
 # 🎓 University Staff Directory System
 
+> A modern, feature-rich staff directory platform for universities and academic institutions
+
 A modern, comprehensive web-based staff directory system built with SvelteKit, TypeScript, MongoDB, and Tailwind CSS. This system allows university faculty and staff to create profiles, enables public searchability, and provides administrators with powerful management tools.
 
 ## ✨ Features
